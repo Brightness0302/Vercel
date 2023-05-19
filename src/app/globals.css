@@ -18,10 +18,18 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+}
+
+.nc-header-bg {
+  @apply bg-white/70 dark:bg-neutral-900/60 backdrop-blur-2xl backdrop-filter;
+}
+
+.dark {
+  @apply bg-d-background;
 }

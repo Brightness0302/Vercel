@@ -1,5 +1,9 @@
 import './globals.css'
+import "../fonts/line-awesome-1.3.0/css/line-awesome.css";
+// import "../styles/index.scss";
+// import "rc-slider/assets/index.css";
 import { Inter } from 'next/font/google'
+import Header from './components/Header/Header';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Header className={"shadow-sm dark:border-b dark:border-neutral-700 m-auto"} />
+        {children}
+      </body>
     </html>
   )
 }
