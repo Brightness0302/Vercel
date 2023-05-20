@@ -105,44 +105,46 @@ import Label from "./Label";
     }
   
     return (
-      <nav
-        ref={navRef}
-        className={`flex flex-shrink-0 items-center relative z-0 py-2 gap-5 ${className}`}
-        onPointerLeave={onLeaveTabs}
-      >
-        {tabs.map((item, i) => {
-          return (
-            <button
-              key={i}
-              className={`min-w-44 md:min-w-56 text-md relative rounded-md flex items-center py-3 md:p-4 z-20 bg-transparent text-sm cursor-pointer select-none transition-colors border border-gray-300 ${((hoveredTabIndex === i || selectedTabIndex === i)?"":"")} text-d-background dark:text-background flex flex-col gap-3 hover:cursor-pointer`}
-              ref={(el) => (buttonRefs[i] = el)}
-              onPointerEnter={(e) => onEnterTab(e, i)}
-              onFocus={(e) => onEnterTab(e, i)}
-              onClick={() => onSelectTab(i)}
-            >
-              <div className="w-8 md:w-10 h-8 md:h-10">
-                {(hoveredTabIndex === i || selectedTabIndex === i)?
-                  <img src={item.iconLightSrc} className="block" />
-                  :<>
-                    <img src={item.iconDarkSrc} className="hidden dark:block" />
-                    <img src={item.iconInactiveSrc} className="block dark:hidden" />
-                  </>
-                }
-                
-              </div>
-              <Label className={`text-xl md:text-2xl filter ${((hoveredTabIndex === i)?"blur-none md:blur-none":"")}`}>{item.heading}</Label>
-              <Label className="text-xs md:text-sm hidden md:block">{item.content}</Label>
-            </button>
-          );
-        })}
-        <div
-          className="absolute z-10 top-0 left-0 rounded-md bg-cornflowerblue transition-[width]"
-          style={hoverStyles}
-        />
-        <div
-          className={"absolute z-10 bottom-0 left-0 h-0.5 bg-slate-500"}
-          style={selectStyles}
-        />
-      </nav>
+      <div className={`${className}`}>
+        <nav
+          ref={navRef}
+          className={`flex flex-shrink-0 items-center relative z-0 py-2 gap-5`}
+          onPointerLeave={onLeaveTabs}
+        >
+          {tabs.map((item, i) => {
+            return (
+              <button
+                key={i}
+                className={`min-w-44 md:min-w-56 text-md relative rounded-md flex items-center py-3 md:p-4 z-20 bg-transparent text-sm cursor-pointer select-none transition-colors border border-gray-300 ${((hoveredTabIndex === i || selectedTabIndex === i)?"":"")} text-d-background dark:text-background flex flex-col gap-3 hover:cursor-pointer`}
+                ref={(el) => (buttonRefs[i] = el)}
+                onPointerEnter={(e) => onEnterTab(e, i)}
+                onFocus={(e) => onEnterTab(e, i)}
+                onClick={() => onSelectTab(i)}
+              >
+                <div className="w-8 md:w-10 h-8 md:h-10">
+                  {(hoveredTabIndex === i || selectedTabIndex === i)?
+                    <img src={item.iconLightSrc} className="block" />
+                    :<>
+                      <img src={item.iconDarkSrc} className="hidden dark:block" />
+                      <img src={item.iconInactiveSrc} className="block dark:hidden" />
+                    </>
+                  }
+                  
+                </div>
+                <Label className={`text-xl md:text-2xl filter ${((hoveredTabIndex === i)?"blur-none md:blur-none":"")}`}>{item.heading}</Label>
+                <Label className="text-xs md:text-sm hidden md:block">{item.content}</Label>
+              </button>
+            );
+          })}
+          <div
+            className="absolute z-10 top-0 left-0 rounded-md bg-cornflowerblue transition-[width]"
+            style={hoverStyles}
+          />
+          <div
+            className={"absolute z-10 bottom-0 left-0 h-0.5 bg-slate-500"}
+            style={selectStyles}
+          />
+        </nav>
+      </div>
     );
   };

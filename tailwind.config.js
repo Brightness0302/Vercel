@@ -43,24 +43,38 @@ module.exports = {
         "white-1/2":"hsla(0,0%,100%,.7)",
         "black-1/2":"hsla(0,0%,20%,.7)",
         "light-brown":"#ff9900",
+        'button-bg': 'rgba(0,0,0,.03)', 
+        'button-d-bg': 'hsla(0,0%,100%,.06)', 
       },
       spacing: {
-        '150': '38rem',
+        '150': '38rem', 
+        '9hr': '900px', //100*9
       },
       minWidth: {
         '44': '176px', 
+        '48': '12rem', 
         '50': '200px', 
         '56': '224px', 
+        '96': '24rem', 
+        '3hr': '300px', //100*3
+        '24ts': '312px', //24*26
       }, 
       maxWidth: {
         '8hr': '800px', //100*8
         '4hr': '400px', //100*4
         'fit': '100vw', 
+        '6/12': '50%', 
+      }, 
+      minHeight: {
+        '48': '12rem', 
+        '96': '24rem', 
       }, 
       lineHeight: {
         '4nt': '76px', //19*4
+        '4xl': '40px', 
       },
       fontSize: {
+        '3.3xl':'32px', 
         '4nt': '76px', //19*4
       },
       blur: {
