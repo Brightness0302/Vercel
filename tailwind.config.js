@@ -48,10 +48,14 @@ module.exports = {
         '150': '38rem',
       },
       minWidth: {
+        '44': '176px', 
+        '50': '200px', 
         '56': '224px', 
       }, 
       maxWidth: {
         '8hr': '800px', //100*8
+        '4hr': '400px', //100*4
+        'fit': '100vw', 
       }, 
       lineHeight: {
         '4nt': '76px', //19*4
@@ -76,6 +80,25 @@ module.exports = {
       extrabold: '800',
       'extra-bold': '800',
       black: '900',
+    },
+    screens: {
+      'xs': '280px',
+      // => @media (min-width: 280px) { ... }
+
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
     }
   },
   plugins: [],

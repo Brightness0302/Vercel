@@ -22,8 +22,12 @@ const MainNav: FC<MainNav1Props> = ({ className = "" }) => {
           <Navigation />
         </div>
 
-        <div className="hidden md:flex flex-shrink-0 justify-end flex-1 lg:flex-none text-neutral-700 dark:text-neutral-100">
-          <div className="hidden xl:flex space-x-0.5">
+        <div className="flex md:hidden">
+          <Logo className="w-24 self-center" />
+        </div>
+
+        <div className="flex flex-shrink-0 justify-end flex-1 lg:flex-none text-neutral-700 dark:text-neutral-100">
+          <div className="hidden md:flex space-x-0.5">
             <SwitchDarkMode />
             <SearchDropdown className="flex items-center" />
             <div className="px-1" />
@@ -38,7 +42,7 @@ const MainNav: FC<MainNav1Props> = ({ className = "" }) => {
             </Button>
           </div>
 
-          <div className="flex xl:hidden items-center">
+          <div className="flex md:hidden items-center">
             <SwitchDarkMode />
             <div className="px-0.5" />
             <MenuBar />

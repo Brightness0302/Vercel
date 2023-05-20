@@ -4,6 +4,8 @@ import "../fonts/line-awesome-1.3.0/css/line-awesome.css";
 // import "rc-slider/assets/index.css";
 import { Inter } from 'next/font/google'
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,6 +24,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header className={"shadow-sm dark:border-b dark:border-neutral-700 m-auto"} />
         {children}
+        <Footer />
+        <ScrollToTopButton />
       </body>
     </html>
   )

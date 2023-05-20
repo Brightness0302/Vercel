@@ -7,6 +7,7 @@ import {
     useRef,
     useState,
     CSSProperties,
+    FC,
   } from "react";
 import Label from "./Label";
   
@@ -20,16 +21,18 @@ import Label from "./Label";
   };
   
   type TabFieldProps = {
+    className?: string;
     selectedTabIndex: number;
     tabs: Tab[];
     setSelectedTab: (input: number) => void;
   };
   
-  export const TabField = ({
+  export const TabField: FC<TabFieldProps> = ({
+    className, 
     tabs,
     selectedTabIndex,
     setSelectedTab,
-  }: TabFieldProps): JSX.Element => {
+  }) => {
     const [buttonRefs, setButtonRefs] = useState<Array<HTMLButtonElement | null>>(
       []
     );
@@ -104,21 +107,20 @@ import Label from "./Label";
     return (
       <nav
         ref={navRef}
-        className="flex flex-shrink-0 justify-center items-center relative z-0 py-2 gap-5"
+        className={`flex flex-shrink-0 items-center relative z-0 py-2 gap-5 ${className}`}
         onPointerLeave={onLeaveTabs}
       >
         {tabs.map((item, i) => {
           return (
             <button
               key={i}
-              className={`min-w-56 text-md relative rounded-md flex items-center p-4 z-20 bg-transparent text-sm cursor-pointer select-none transition-colors border border-gray-300
-                ${((hoveredTabIndex === i || selectedTabIndex === i)?"":"")} text-d-background dark:text-background flex flex-col gap-3 hover:cursor-pointer`}
+              className={`min-w-44 md:min-w-56 text-md relative rounded-md flex items-center py-3 md:p-4 z-20 bg-transparent text-sm cursor-pointer select-none transition-colors border border-gray-300 ${((hoveredTabIndex === i || selectedTabIndex === i)?"":"")} text-d-background dark:text-background flex flex-col gap-3 hover:cursor-pointer`}
               ref={(el) => (buttonRefs[i] = el)}
               onPointerEnter={(e) => onEnterTab(e, i)}
               onFocus={(e) => onEnterTab(e, i)}
               onClick={() => onSelectTab(i)}
             >
-              <div className="w-10 h-10">
+              <div className="w-8 md:w-10 h-8 md:h-10">
                 {(hoveredTabIndex === i || selectedTabIndex === i)?
                   <img src={item.iconLightSrc} className="block" />
                   :<>
@@ -128,8 +130,8 @@ import Label from "./Label";
                 }
                 
               </div>
-              <Label className={`text-2xl filter ${((hoveredTabIndex === i)?"blur-light":"")}`}>{item.heading}</Label>
-              <Label className="text-sm">{item.content}</Label>
+              <Label className={`text-xl md:text-2xl filter ${((hoveredTabIndex === i)?"blur-none md:blur-none":"")}`}>{item.heading}</Label>
+              <Label className="text-xs md:text-sm hidden md:block">{item.content}</Label>
             </button>
           );
         })}

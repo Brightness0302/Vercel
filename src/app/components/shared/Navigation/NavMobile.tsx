@@ -5,13 +5,13 @@ import ButtonClose from "@/app/components/shared/ButtonClose";
 import Logo from "@/app/components/shared/Logo";
 import { Disclosure } from "@headlessui/react";
 import { NavItemType } from "./NavigationItem";
-// import { NAVIGATION_DEMO } from "@/data/navigation";
 import ButtonPrimary from "@/app/components/shared/ButtonPrimary";
 import SocialsList from "@/app/components/shared/SocialsList";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import SwitchDarkMode from "@/app/components/shared/SwitchDarkMode";
 import Link from "next/link";
-// import LangDropdown from "@/app/(client-components)/(Header)/LangDropdown";
+import { NAVIGATION_DEMO } from "@/data/navigation";
+import Button from "../Button";
 
 export interface NavMobileProps {
   data?: NavItemType[];
@@ -19,7 +19,7 @@ export interface NavMobileProps {
 }
 
 const NavMobile: React.FC<NavMobileProps> = ({
-  data = [],
+  data = NAVIGATION_DEMO,
   onClickClose,
 }) => {
   const _renderMenuChild = (item: NavItemType) => {
@@ -124,24 +124,13 @@ const NavMobile: React.FC<NavMobileProps> = ({
           <ButtonClose onClick={onClickClose} />
         </span>
       </div>
+      <div className="flex flex-col justify-center gap-5 py-5">
+        <Button className="border border-gray-500 mx-5 text-neutral-700 dark:text-neutral-200 rounded-md bg-background dark:bg-d-background">Login</Button>
+        <Button className="border border-gray-500 mx-5 text-neutral-200 dark:text-neutral-700 rounded-md bg-d-background dark:bg-background">Sign Up</Button>
+      </div>
       <ul className="flex flex-col py-6 px-2 space-y-1">
         {data.map(_renderItem)}
       </ul>
-      <div className="flex items-center justify-between py-6 px-5">
-        <a
-          className="inline-block"
-          href="https://themeforest.net/item/chisfis-online-booking-nextjs-template/43399526"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <ButtonPrimary>Get Template</ButtonPrimary>
-        </a>
-
-        {/* <LangDropdown
-          className="flex"
-          panelClassName="z-10 w-screen max-w-[280px] px-4 mb-3 right-3 bottom-full sm:px-0"
-        /> */}
-      </div>
     </div>
   );
 };
