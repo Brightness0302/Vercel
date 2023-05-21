@@ -131,8 +131,8 @@ import Label from "./Label";
                   }
                   
                 </div>
-                <Label className={`text-xl md:text-2xl filter ${((hoveredTabIndex === i)?"blur-none md:blur-none":"")}`}>{item.heading}</Label>
-                <Label className="text-xs md:text-sm hidden md:block">{item.content}</Label>
+                <Label className={`text-xl md:text-2xl cursor-pointer filter ${((hoveredTabIndex === i)?"blur-none md:blur-none":"")}`}>{item.heading}</Label>
+                <Label className="text-xs md:text-sm cursor-pointer hidden md:block">{item.content}</Label>
               </button>
             );
           })}

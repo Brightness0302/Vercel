@@ -51,3 +51,11 @@ body {
   -webkit-transition: background-color .5s ease-out;
   -o-transition: background-color .5s ease-out; */
 }
+
+.backgroundButton:hover {
+  @apply bg-neutral-100 dark:bg-neutral-800;
+}
+
+.d-backgroundButton:hover {
+  @apply bg-neutral-600 dark:bg-neutral-300;
+}

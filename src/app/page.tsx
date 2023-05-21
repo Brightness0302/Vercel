@@ -44,8 +44,8 @@ export default function Home() {
             <Heading className='text-transparent text-3xl md:text-6xl bg-clip-text bg-gradient-to-b from-gray-500 dark:from-white to-black dark:to-gray-400 max-w-8hr font-extrabold leading-10 md:leading-4nt py-6 tracking-tighter' >Global data for high-performance web apps</Heading>
             <PField className='font-normal text-base md:text-xl tracking-tight text-neutral-700 dark:text-neutral-200'>Vercel KV is a fully managed, globally replicated, Redis-compatible database optimized for high-performance web apps.</PField>
             <div className='flex justify-around md:justify-start'>
-              <Button className="border border-gray-500 mx-5 text-neutral-200 dark:text-neutral-700 rounded-md bg-d-background dark:bg-background">Get Started</Button>
-              <Button className="border border-gray-500 mx-5 text-neutral-700 dark:text-neutral-200 rounded-md bg-background dark:bg-d-background">View the Docs</Button>
+              <Button className="border border-gray-500 mx-5 text-neutral-200 dark:text-neutral-700 rounded-md bg-d-background dark:bg-background d-backgroundButton">Get Started</Button>
+              <Button className="border border-gray-500 mx-5 text-neutral-700 dark:text-neutral-200 rounded-md bg-background dark:bg-d-background backgroundButton">View the Docs</Button>
             </div>
           </div>
         </div>
@@ -69,11 +69,18 @@ export default function Home() {
           <Heading className='text-transparent text-base md:text-3.3xl bg-clip-text bg-gradient-to-b from-gray-500 dark:from-white to-black dark:to-gray-400 max-w-8hr font-extrabold leading-5 md:leading-4xl py-6 tracking-tighter' >Built for modern web frameworks</Heading>
           <PField className='font-normal text-sm md:text-xl tracking-tight text-neutral-700 dark:text-neutral-200 w-full md:w-9hr'>Designed for the evolution of JavaScript and TypeScript frameworks, Vercel KV allows developers to store and retrieve any JavaScript value with a promise-based API, without worrying about serialization.</PField>
         </div>
-        <div className='flex flex-col md:flex-row justify-around gap-10'>
-          <div className='flex flex-col gap-5 min-w-24ts justify-center'>
+        <div className='flex flex-col md:flex-row justify-around gap-5 md:gap-10'>
+          <div className='hidden md:flex flex-row md:flex-col gap-5 min-w-24ts justify-start'>
             <ButtonNav className='border border-transparent hover:border-gray-500' imageSrc='/Buttons/Frame_427318739.svg' imageAlt='Next.js' heading='Next.js' content='Fetch saved user preferences' />
             <ButtonNav className='border border-transparent hover:border-gray-500' imageSrc='/Buttons/Frame_427318740.svg' imageAlt='SvelteKit' heading='SvelteKit' content='Store session data' />
             <ButtonNav className='border border-transparent hover:border-gray-500' imageSrc='/Buttons/Nuxt.svg' imageAlt='Nuxt' heading='Nuxt' content='Store session data' />
+          </div>
+          <div className='block md:hidden max-w-fit md:max-w-none overflow-x-auto md:overflow-x-clip'>
+            <div className='flex flex-row md:flex-col gap-5 justify-start'>
+              <ButtonNav className='border border-transparent hover:border-gray-500 min-w-24ts' imageSrc='/Buttons/Frame_427318739.svg' imageAlt='Next.js' heading='Next.js' content='Fetch saved user preferences' />
+              <ButtonNav className='border border-transparent hover:border-gray-500 min-w-24ts' imageSrc='/Buttons/Frame_427318740.svg' imageAlt='SvelteKit' heading='SvelteKit' content='Store session data' />
+              <ButtonNav className='border border-transparent hover:border-gray-500 min-w-24ts' imageSrc='/Buttons/Nuxt.svg' imageAlt='Nuxt' heading='Nuxt' content='Store session data' />
+            </div>
           </div>
           <div>
             <img className='object-contain' src='/Images/vip-taxi.jpg' alt='vip-taxi' />

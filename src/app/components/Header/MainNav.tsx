@@ -31,10 +31,10 @@ const MainNav: FC<MainNav1Props> = ({ className = "" }) => {
             <SwitchDarkMode />
             <SearchDropdown className="flex items-center" />
             <div className="px-1" />
-            <Button className="self-center bg-transparent" href="/contact">
+            <Button className="self-center bg-transparent backgroundButton rounded-full" href="/contact">
               Contact
             </Button>
-            <Button className="self-center bg-transparent" href="/login">
+            <Button className="self-center bg-transparent backgroundButton rounded-full" href="/login">
               Login
             </Button>
             <Button className="self-center bg-d-background dark:bg-background hover:bg-background text-background dark:text-d-background hover:text-d-background rounded-lg  border border-d-background" href="/register">
