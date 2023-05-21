@@ -71,21 +71,25 @@ export default function Home() {
         </div>
         <div className='flex flex-col md:flex-row justify-around gap-5 md:gap-10'>
           <div className='hidden md:flex flex-row md:flex-col gap-5 min-w-24ts justify-start'>
-            <ButtonNav className='border border-transparent hover:border-gray-500' imageSrc='/Buttons/Frame_427318739.svg' imageAlt='Next.js' heading='Next.js' content='Fetch saved user preferences' />
-            <ButtonNav className='border border-transparent hover:border-gray-500' imageSrc='/Buttons/Frame_427318740.svg' imageAlt='SvelteKit' heading='SvelteKit' content='Store session data' />
-            <ButtonNav className='border border-transparent hover:border-gray-500' imageSrc='/Buttons/Nuxt.svg' imageAlt='Nuxt' heading='Nuxt' content='Store session data' />
+            <ButtonNav className='border border-transparent dark:border-background hover:border-gray-500 dark:hover:border-gray-500' imageSrc='/Buttons/Frame_427318739.svg' imageAlt='Next.js' heading='Next.js' content='Fetch saved user preferences' />
+            <ButtonNav className='border border-transparent dark:border-background hover:border-gray-500 dark:hover:border-gray-500' imageSrc='/Buttons/Frame_427318740.svg' imageAlt='SvelteKit' heading='SvelteKit' content='Store session data' />
+            <ButtonNav className='border border-transparent dark:border-background hover:border-gray-500 dark:hover:border-gray-500' imageSrc='/Buttons/Nuxt.svg' imageAlt='Nuxt' heading='Nuxt' content='Store session data' />
           </div>
           <div className='block md:hidden max-w-fit md:max-w-none overflow-x-auto md:overflow-x-clip'>
             <div className='flex flex-row md:flex-col gap-5 justify-start'>
-              <ButtonNav className='border border-transparent hover:border-gray-500 min-w-24ts' imageSrc='/Buttons/Frame_427318739.svg' imageAlt='Next.js' heading='Next.js' content='Fetch saved user preferences' />
-              <ButtonNav className='border border-transparent hover:border-gray-500 min-w-24ts' imageSrc='/Buttons/Frame_427318740.svg' imageAlt='SvelteKit' heading='SvelteKit' content='Store session data' />
-              <ButtonNav className='border border-transparent hover:border-gray-500 min-w-24ts' imageSrc='/Buttons/Nuxt.svg' imageAlt='Nuxt' heading='Nuxt' content='Store session data' />
+              <ButtonNav className='border border-transparent dark:border-background hover:border-gray-500 dark:hover:border-gray-500 min-w-24ts' imageSrc='/Buttons/Frame_427318739.svg' imageAlt='Next.js' heading='Next.js' content='Fetch saved user preferences' />
+              <ButtonNav className='border border-transparent dark:border-background hover:border-gray-500 dark:hover:border-gray-500 min-w-24ts' imageSrc='/Buttons/Frame_427318740.svg' imageAlt='SvelteKit' heading='SvelteKit' content='Store session data' />
+              <ButtonNav className='border border-transparent dark:border-background hover:border-gray-500 dark:hover:border-gray-500 min-w-24ts' imageSrc='/Buttons/Nuxt.svg' imageAlt='Nuxt' heading='Nuxt' content='Store session data' />
             </div>
           </div>
           <div>
             <img className='object-contain' src='/Images/vip-taxi.jpg' alt='vip-taxi' />
           </div>
         </div>
+      </div>
+      <div className="w-full h-[336px] my-24">
+        <div className='gradient-image gradient-image-light block dark:hidden'></div>
+        <div className='gradient-image gradient-image-dark hidden dark:block'></div>
       </div>
     </main>
   )

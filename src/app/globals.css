@@ -59,3 +59,34 @@ body {
 .d-backgroundButton:hover {
   @apply bg-neutral-600 dark:bg-neutral-300;
 }
+
+.gradient-image {
+  width: 100%;
+  height: 100%;
+  --gradient-image-url-dark:url(https://images.ctfassets.net/e5382hct74si/5RJZ0Nk5TjMNANRbNT45QD/fd02cfb50f118b444e7f2f7a4fcafe7e/KV-Dark-Bitmotif.svg);
+  --gradient-image-url-light:url(https://images.ctfassets.net/e5382hct74si/7vW9pH8OApAhL1vW1Z1FrO/b640d41d2b27b21bd0da41738918a88e/KV-Light-Bitmotif.svg);
+
+  /* position: absolute; */
+  inset: 0;
+  background-image: var(--gradient-image-url);
+  background-repeat: repeat-x;
+  background-position: top;
+
+  --gradient-image-height-dark: 356px;
+  --gradient-image-height-light: 356px;
+  --gradient-image-width-dark: 1595px;
+  --gradient-image-width-light: 1595px;
+
+}
+
+.gradient-image-dark {
+  --grid-background-color-dark: #251111;
+  --grid-background-color: var(--grid-background-color-dark);
+  --gradient-image-url: var(--gradient-image-url-dark);
+}
+
+.gradient-image-light {
+  --grid-background-color-light: #FFF5F1;
+  --grid-background-color: var(--grid-background-color-light);
+  --gradient-image-url: var(--gradient-image-url-light);
+}
