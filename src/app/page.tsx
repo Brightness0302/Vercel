@@ -11,6 +11,8 @@ import { useState } from 'react'
 import Badge from './components/shared/Badge'
 import Button from './components/shared/Button'
 import ButtonNav from './components/ButtonNav'
+import Info1Field from './components/Info1Field'
+import Info2Field from './components/Info2Field'
 
 export default function Home() {
   const [selectedTab, setSelectedTab] = useState(0);
@@ -83,13 +85,40 @@ export default function Home() {
             </div>
           </div>
           <div>
-            <img className='object-contain' src='/Images/vip-taxi.jpg' alt='vip-taxi' />
+            <img className='object-contain rounded-2xl' src='/Images/vip-taxi.jpg' alt='vip-taxi' />
           </div>
         </div>
       </div>
       <div className="w-full h-[336px] my-24">
         <div className='gradient-image gradient-image-light block dark:hidden'></div>
         <div className='gradient-image gradient-image-dark hidden dark:block'></div>
+      </div>
+      <div className='px-6 md:px-32 items-center w-full flex flex-col justify-start gap-10 mt-0 mb-32'>
+        <div className='w-full'>
+          <Heading className='text-transparent text-base md:text-3.3xl bg-clip-text bg-gradient-to-b from-gray-500 dark:from-white to-black dark:to-gray-400 max-w-8hr font-extrabold leading-5 md:leading-4xl py-6 tracking-tighter' >Highly available, fully managed</Heading>
+          <PField className='font-normal text-sm md:text-xl tracking-tight text-neutral-700 dark:text-neutral-200 w-full md:w-9hr'>A database designed for instant provisioning, unlimited environments, and automatic scaling. No more clusters or connection pooling.</PField>
+        </div>
+        <div className='flex flex-col md:flex-row gap-5'>
+          <div>
+            <img src='/Images/deluxe-enter-cab-1024x678.webp' alt='Deluxe-Enter-cab' className='rounded-2xl shadow-xl' />
+          </div>
+          <div className='flex flex-col gap-5'>
+            <Info1Field iconName='las la-compress-arrows-alt' heading='Effortless scaling' content='Built to handle the unpredictable nature of web traffic, scaling up and down as needed.' />
+            <Info1Field iconName='las la-clock' heading='Ready for the edge' content="For low-latency, high-throughput reads and writes, designed to work natively with Vercel's compute products." />
+            <Info1Field iconName='las la-exclamation-triangle' heading='No management required' content="No setup required. Spend your time building your application, not managing database instances." />
+          </div>
+        </div>
+      </div>
+      <div className='px-6 md:px-32 items-center w-full flex flex-col justify-start gap-10 mt-0 mb-32'>
+        <div className='w-full'>
+          <Heading className='text-transparent text-base md:text-3.3xl bg-clip-text bg-gradient-to-b from-gray-500 dark:from-white to-black dark:to-gray-400 max-w-8hr font-extrabold leading-5 md:leading-4xl py-6 tracking-tighter' >Get started with Redis® on Vercel</Heading>
+          <PField className='font-normal text-sm md:text-xl tracking-tight text-neutral-700 dark:text-neutral-200 w-full md:w-9hr'>Deploy a template that uses Vercel KV and start reading and writing data in minutes.</PField>
+        </div>
+        <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 md:flex-row gap-5'>
+          <Info2Field heading='Vercel KV Next.js Starter' content='Simple Next.js template that uses Vercel KV for Redis to track pageviews.' imageSrc='/Buttons/Frame_427318739.svg' imageAlt='Nuxt' imageDesc='Built with Next.js' />
+          <Info2Field heading='Vercel KV Sveltekit Starter' content='Simple Sveltekit template that uses Vercel KV for Redis to track pageviews.' imageSrc='/Buttons/Frame_427318740.svg' imageAlt='Nuxt' imageDesc='Built with Svelte' />
+          <Info2Field heading='Vercel KV Next.js Starter' content='Simple Nuxt template that uses Vercel KV for Redis to track pageviews.' imageSrc='/Buttons/Nuxt.svg' imageAlt='Nuxt' imageDesc='Built with Nuxt' />
+        </div>
       </div>
     </main>
   )
