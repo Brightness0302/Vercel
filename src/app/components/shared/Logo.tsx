@@ -15,15 +15,15 @@ export interface LogoProps {
 const Logo: React.FC<LogoProps> = ({
   img,
   imgLight,
-  className = "w-24",
+  className = "w-32",
 }) => {
   return (
     <Link
       href="/"
       className={`ttnc-logo inline-block text-primary-6000 focus:outline-none focus:ring-0 ${className}`}
     >
-      <LogoSvgLight />
-      <LogoSvg />
+      <LogoSvgLight className="dark dark:hidden" />
+      <LogoSvg className="hidden dark:block" />
 
       {/* THIS USE FOR MY CLIENT */}
       {/* PLEASE UN COMMENT BELLOW CODE AND USE IT */}
