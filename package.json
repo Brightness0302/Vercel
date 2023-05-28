@@ -13,6 +13,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@headlessui/react": "^1.7.14",
     "@heroicons/react": "^2.0.18",
+    "@react-three/drei": "^9.68.6",
     "@types/node": "20.2.1",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
@@ -20,12 +21,16 @@
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.3",
     "framer-motion": "^10.12.12",
+    "leva": "^0.9.34",
     "next": "13.4.3",
     "postcss": "8.4.23",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hooks-global-state": "^2.1.0",
+    "react-swipeable": "^7.0.0",
+    "react-use": "^17.4.0",
     "tailwindcss": "3.3.2",
+    "three-stdlib": "^2.21.12",
     "typescript": "5.0.4"
   }
 }

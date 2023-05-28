@@ -18,12 +18,12 @@ const MainNav: FC<MainNav1Props> = ({ className = "" }) => {
     <div className={`nc-MainNav1 relative z-10 ${className}`}>
       <div className="px-4 lg:container h-20 relative flex justify-around m-auto">
         <div className="hidden md:flex gap-10">
-          <Logo className="w-40 self-center" />
+          <Logo className="w-24 self-center" />
           <Navigation />
         </div>
 
         <div className="flex md:hidden">
-          <Logo className="w-40 self-center" />
+          <Logo className="w-24 self-center" />
         </div>
 
         <div className="flex flex-shrink-0 justify-end flex-1 lg:flex-none text-neutral-700 dark:text-neutral-100">

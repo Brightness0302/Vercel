@@ -242,9 +242,6 @@ const NavigationItem: FC<NavigationItemWithRouterProps> = ({ menuItem }) => {
         href={item.href || ""}
       >
         <div className="flex gap-4">
-          {/* {item.icon && (
-            <img src={item.icon} />
-          )} */}
           {item.icon && (
             <IconField className="text-xl" iconName={item.icon} />
           )}
@@ -269,7 +266,7 @@ const NavigationItem: FC<NavigationItemWithRouterProps> = ({ menuItem }) => {
         href={item.href || "/"}
       >
         {item.icon && (
-          <img src={item.icon} />
+          <Image src={item.icon} alt="icon" width={40} height={40} />
         )}
         {item.name}
         {item.type && (

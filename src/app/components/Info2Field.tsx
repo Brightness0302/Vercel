@@ -4,6 +4,7 @@ import React, { FC } from "react";
 import Label from "./Label";
 import IconField from "./IconField";
 import Button from "./shared/Button";
+import Image from 'next/image'
 
 export interface InfoFieldProps {
   heading?: string; 
@@ -38,13 +39,13 @@ const Info2Field: FC<InfoFieldProps> = ({
                         <Label className="text-sm">{content}</Label>
                         <hr />
                         <div className="flex flex-row justify-start gap-3">
-                            <img src={imageSrc} alt={imageAlt} />
+                            <Image src={imageSrc} alt={imageAlt} width={32} height={32} />
                             <Label>{imageDesc}</Label>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="flex flex-row justify-between gap-5 p-4 border border-0 border-t-2 border-gray-300 bg-zinc-50">
+            <div className="flex flex-row justify-between gap-5 p-4 border border-0 border-t-2 border-gray-300 bg-zinc-50 dark:bg-zinc-800">
                 <Button className="border border-gray-500 text-neutral-200 dark:text-neutral-700 rounded-md bg-d-background dark:bg-background d-backgroundButton w-full" sizeClass="px-3 py-1"><IconField iconName="las la-exclamation-triangle" />View Template</Button>
                 <Button className="border border-gray-500 text-neutral-700 dark:text-neutral-200 rounded-md bg-background dark:bg-d-background backgroundButton w-full" sizeClass="px-3 py-1">View Repo</Button>
             </div>
